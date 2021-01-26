@@ -1,19 +1,52 @@
 import { fifaData } from './fifa.js';
 
+// console.log(fifaData.filter(item => item.Year == 2014).length);
+// console.log(fifaData.filter(item => item.Stage == "Final").length);
+// const allStages = [];
+// for (let i = 0; i < fifaData.length; i++) {
+//     if (!allStages.includes(fifaData[i].Stage)) {
+//         allStages.push(fifaData[i].Stage);
+//     }
+// }
+
+// console.log(allStages);
+
+// function filterByYear(data, year) {
+//     return data.filter(item => item.Year == year);
+// }
+
+// function filterByStage(data, stage) {
+//     return data.filter(item => item.Stage == stage);
+// }
+
+// let final2014 = filterByYear(filterByStage(fifaData, "Final"), 2014)[0];
+
 // ⚽️ M  V P ⚽️ //
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Practice accessing data by console.log-ing the following pieces of data note, you may want to filter the data first 😉*/
 
+const final2014 = fifaData.filter(game => game.Stage == "Final" && game.Year == 2014)[0];
+
 //(a) Home Team name for 2014 world cup final
+
+console.log(final2014["Home Team Name"]);
 
 //(b) Away Team name for 2014 world cup final
 
+console.log(final2014["Away Team Name"]);
+
 //(c) Home Team goals for 2014 world cup final
+
+console.log(final2014["Home Team Goals"]);
 
 //(d) Away Team goals for 2014 world cup final
 
+console.log(final2014["Away Team Goals"]);
+
 //(e) Winner of 2014 world cup final */
+
+console.log( final2014["Home Team Goals"] > final2014["Away Team Goals"] ? final2014["Home Team Name"] : final2014["Away Team Name"] );
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
